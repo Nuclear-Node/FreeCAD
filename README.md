@@ -101,9 +101,14 @@ The [FreeCAD forum](http://forum.freecadweb.org) is also a great place
 to find help and solve specific problems you might encounter when
 learning to use FreeCAD.
 
-FreeCAD Nuclear Node Contributers
-
+# FreeCAD Nuclear Node Contributers
+Jeffrey McDonald
 Sangdo Han
+<<<<<<< HEAD
 Yeonah Cho
+=======
+Another name
+Phoebe Kim
+>>>>>>> 142fd3141120ac7ab6cfa2d90981d89507c357bd
 
 # FreeCAD
