@@ -102,5 +102,6 @@ to find help and solve specific problems you might encounter when
 learning to use FreeCAD.
 
 FreeCAD Nuclear Node Contributers
+Phoebe Kim
 
 # FreeCAD
