@@ -104,5 +104,6 @@ learning to use FreeCAD.
 FreeCAD Nuclear Node Contributers
 
 Sangdo Han
+Yeonah Cho
 
 # FreeCAD
