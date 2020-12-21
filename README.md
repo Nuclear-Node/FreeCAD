@@ -1,4 +1,4 @@
-![Logo](https://www.freecadweb.org/images/logo.png)
+﻿![Logo](https://www.freecadweb.org/images/logo.png)
 
 ### Your own 3D parametric modeler
 
@@ -102,5 +102,7 @@ to find help and solve specific problems you might encounter when
 learning to use FreeCAD.
 
 FreeCAD Nuclear Node Contributers
+
+Sangdo Han
 
 # FreeCAD
