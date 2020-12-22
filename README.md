@@ -109,4 +109,5 @@ learning to use FreeCAD.
 - [Yeonah Cho]
 - [Phoebe Kim]
 - [Aung Kyaw]
+- [Mohamed Hamida]
 
