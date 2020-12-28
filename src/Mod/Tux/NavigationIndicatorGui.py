@@ -288,6 +288,26 @@ def retranslateUi():
      </tr>
     </table>"""
 
+    global t9
+    t9 = "<p align='center'><b>Pan</b> " + text06 + """</p>
+    <table>
+     <tr>
+      <th><small>""" + text01 + """</small></th>
+      <th><small>""" + text02 + """</small></th>
+      <th><small>""" + text03 + """</small></th>
+      <th><small>""" + text04 + """</small></th>
+      <th><small>""" + text04 + """</small></th>
+     </tr>
+     <tr>
+      <td align='center'><img src=':/icons/NavigationBlender_Select.svg'></td>
+      <td align='center'><img src=':/icons/NavigationBlender_Zoom.svg'></td>
+      <td align='center'><img src=':/icons/NavigationBlender_Rotate.svg'></td>
+      <td align='center'><img src=':/icons/NavigationBlender_Pan.svg'></td>
+      <td align='center'><img src=':/icons/NavigationBlender_PanAlt.svg'></td>
+     </tr>
+    </table>
+    <b>""" + text08 + ":</b> " + text10 + "</small></p>"
+
     menuSettings.setTitle(translate("NavigationIndicator", "Settings"))
     menuOrbit.setTitle(translate("NavigationIndicator", "Orbit style"))
     aCompact.setText(translate("NavigationIndicator", "Compact"))
@@ -378,17 +398,17 @@ a7.setText("Gesture")
 a7.setData("Gui::GestureNavigationStyle")
 a7.setObjectName("Indicator_NavigationGesture")
 
-#a8 = QtGui.QAction(gStyle)
-#a8.setIcon(QtGui.QIcon(":/icons/NavigationOpenCascade.svg"))
-#a8.setText("OpenCascade")
-#a8.setData("Gui::OpenCascadeNavigationStyle")
-#a8.setObjectName("Indicator_NavigationOpenCascade")
-
 a8 = QtGui.QAction(gStyle)
-a8.setIcon(QtGui.QIcon(":/icons/NavigationBlender.svg"))
-a8.setText("Pan")
-a8.setData("Gui::PanNavigationStyle")
+a8.setIcon(QtGui.QIcon(":/icons/NavigationOpenCascade.svg"))
+a8.setText("OpenCascade")
+a8.setData("Gui::OpenCascadeNavigationStyle")
 a8.setObjectName("Indicator_NavigationOpenCascade")
+
+a9 = QtGui.QAction(gStyle)
+a9.setIcon(QtGui.QIcon(":/icons/NavigationBlender.svg"))
+a9.setText("Pan")
+a9.setData("Gui::PanNavigationStyle")
+a9.setObjectName("Indicator_NavigationOpenCascade")
 
 menu.addMenu(menuSettings)
 menu.addSeparator()
@@ -400,7 +420,8 @@ menu.addAction(a2)
 #menu.addAction(a5)
 #menu.addAction(a6)
 #menu.addAction(a7)
-menu.addAction(a8)
+#menu.addAction(a8)
+menu.addAction(a9)
 
 
 def onCompact():
@@ -436,6 +457,7 @@ def onTooltip():
         a6.setToolTip(t6)
         a7.setToolTip(t7)
         a8.setToolTip(t8)
+        a9.setToolTip(t9)
         p.SetBool("Tooltip", 1)
     else:
         for i in gStyle.actions():
