@@ -76,6 +76,7 @@
 #include "GraphvizView.h"
 #include "DlgObjectSelection.h"
 
+
 FC_LOG_LEVEL_INIT("Command", false)
 
 using namespace Gui;
@@ -428,8 +429,11 @@ void StdCmdNew::activated(int iMsg)
     doCommand(Command::Gui,"Gui.activeDocument().activeView().viewDefaultOrientation()");
 
     ParameterGrp::handle hViewGrp = App::GetApplication().GetParameterGroupByPath("User parameter:BaseApp/Preferences/View");
+
     if (hViewGrp->GetBool("ShowAxisCross"))
         doCommand(Command::Gui,"Gui.ActiveDocument.ActiveView.setAxisCross(True)");
+
+    doCommand(PythonCommand::Doc, "App.activeDocument().addObject('Sketcher::SketchObject','Sketch')");
 }
 
 //===========================================================================
