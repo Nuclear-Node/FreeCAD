@@ -341,11 +341,13 @@ void Workbench::createMainWindowPopupMenu(MenuItem*) const
 }
 
 void Workbench::createLinkMenu(MenuItem *item) {
+    /*
     if(!item || !App::GetApplication().getActiveDocument())
         return;
     MenuItem* linkMenu = new MenuItem;
-    linkMenu->setCommand("Link actions");
-    *linkMenu << "Std_LinkMakeGroup" << "Std_LinkMake";
+
+    //linkMenu->setCommand("Link actions");
+    //linkMenu << "Std_LinkMakeGroup" << "Std_LinkMake";
 
     auto &rMgr = Application::Instance->commandManager();
     const char *cmds[] = {"Std_LinkMakeRelative",0,"Std_LinkUnlink","Std_LinkReplace",
@@ -367,6 +369,7 @@ void Workbench::createLinkMenu(MenuItem *item) {
         }
     }
     *item << linkMenu;
+    */
 }
 
 void Workbench::activated()
@@ -479,23 +482,27 @@ void StdWorkbench::setupContextMenu(const char* recipient, MenuItem* item) const
         *item << "Separator";
 
         MenuItem* StdViews = new MenuItem;
-        StdViews->setCommand( "Standard views" );
-
+        
+        /*StdViews->setCommand( "Standard views" );
+        
         *StdViews << "Std_ViewIsometric" << "Separator" << "Std_ViewFront" << "Std_ViewTop" << "Std_ViewRight"
                   << "Std_ViewRear" << "Std_ViewBottom" << "Std_ViewLeft"
                   << "Separator" << "Std_ViewRotateLeft" << "Std_ViewRotateRight";
-
+        */
         MenuItem *measure = new MenuItem();
+        /*
         measure->setCommand("Measure");
         *measure << "View_Measure_Toggle_All" << "View_Measure_Clear_All";
-
+        */
         *item << "Std_ViewFitAll" << "Std_ViewFitSelection" << "Std_DrawStyle" << StdViews << measure
               << "Separator" << "Std_ViewDockUndockFullscreen";
-
+        
         if (Gui::Selection().countObjectsOfType(App::DocumentObject::getClassTypeId()) > 0) {
+            
             *item << "Separator" << "Std_SetAppearance" << "Std_ToggleVisibility"
                   << "Std_ToggleSelectability" << "Std_TreeSelection" 
-                  << "Std_RandomColor" << "Separator" << "Std_Delete";
+                  /*<< "Std_RandomColor"*/ << "Separator" << "Std_Delete";
+                  
         }
     }
     else if (strcmp(recipient,"Tree") == 0)
@@ -503,7 +510,7 @@ void StdWorkbench::setupContextMenu(const char* recipient, MenuItem* item) const
         if (Gui::Selection().countObjectsOfType(App::DocumentObject::getClassTypeId()) > 0) {
             *item << "Std_ToggleVisibility" << "Std_ShowSelection" << "Std_HideSelection"
                   << "Std_ToggleSelectability" << "Std_TreeSelectAllInstances" << "Separator" 
-                  << "Std_SetAppearance" << "Std_RandomColor" << "Separator" 
+                  << "Std_SetAppearance" /*<< "Std_RandomColor"*/ << "Separator" 
                   << "Std_Cut" << "Std_Copy" << "Std_Paste" << "Std_Delete" << "Separator";
         }
     }
@@ -634,7 +641,7 @@ MenuItem* StdWorkbench::setupMenuBar() const
     return menuBar;
 }
 
-ToolBarItem* StdWorkbench::setupToolBars() const
+ToolBarItem* StdWorkbench::sFetupToolBars() const
 {
     ToolBarItem* root = new ToolBarItem;
 

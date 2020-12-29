@@ -3382,7 +3382,7 @@ public:
         addCommand();
 
         addCommand(new StdTreeDrag(),cmds.size());
-        addCommand(new StdTreeSelection(),cmds.size());
+       // addCommand(new StdTreeSelection(),cmds.size());
     };
     virtual const char* className() const {return "StdCmdTreeViewActions";}
 };
@@ -3453,9 +3453,9 @@ void CreateViewStdCommands(void)
     rcCmdMgr.addCommand(new StdCmdViewIsometric());
     rcCmdMgr.addCommand(new StdCmdViewDimetric());
     rcCmdMgr.addCommand(new StdCmdViewTrimetric());
-    rcCmdMgr.addCommand(new StdCmdViewFitAll());
+    // rcCmdMgr.addCommand(new StdCmdViewFitAll());
     rcCmdMgr.addCommand(new StdCmdViewVR());
-    rcCmdMgr.addCommand(new StdCmdViewFitSelection());
+    // rcCmdMgr.addCommand(new StdCmdViewFitSelection());
     rcCmdMgr.addCommand(new StdCmdViewRotateLeft());
     rcCmdMgr.addCommand(new StdCmdViewRotateRight());
 
@@ -3474,10 +3474,10 @@ void CreateViewStdCommands(void)
     rcCmdMgr.addCommand(new StdCmdViewCreate());
     rcCmdMgr.addCommand(new StdViewScreenShot());
     rcCmdMgr.addCommand(new StdMainFullscreen());
-    rcCmdMgr.addCommand(new StdViewDockUndockFullscreen());
-    rcCmdMgr.addCommand(new StdCmdSetAppearance());
-    rcCmdMgr.addCommand(new StdCmdToggleVisibility());
-    rcCmdMgr.addCommand(new StdCmdToggleSelectability());
+   // rcCmdMgr.addCommand(new StdViewDockUndockFullscreen());
+   // rcCmdMgr.addCommand(new StdCmdSetAppearance());
+   // rcCmdMgr.addCommand(new StdCmdToggleVisibility());
+   // rcCmdMgr.addCommand(new StdCmdToggleSelectability());
     rcCmdMgr.addCommand(new StdCmdShowSelection());
     rcCmdMgr.addCommand(new StdCmdHideSelection());
     rcCmdMgr.addCommand(new StdCmdSelectVisibleObjects());
@@ -3487,7 +3487,7 @@ void CreateViewStdCommands(void)
     rcCmdMgr.addCommand(new StdOrthographicCamera());
     rcCmdMgr.addCommand(new StdPerspectiveCamera());
     rcCmdMgr.addCommand(new StdCmdToggleClipPlane());
-    rcCmdMgr.addCommand(new StdCmdDrawStyle());
+   // rcCmdMgr.addCommand(new StdCmdDrawStyle());
     rcCmdMgr.addCommand(new StdCmdFreezeViews());
     rcCmdMgr.addCommand(new StdViewZoomIn());
     rcCmdMgr.addCommand(new StdViewZoomOut());
@@ -3503,7 +3503,7 @@ void CreateViewStdCommands(void)
     rcCmdMgr.addCommand(new StdCmdDemoMode());
     rcCmdMgr.addCommand(new StdCmdToggleNavigation());
     rcCmdMgr.addCommand(new StdCmdAxisCross());
-    rcCmdMgr.addCommand(new CmdViewMeasureClearAll());
+    // rcCmdMgr.addCommand(new CmdViewMeasureClearAll());
     rcCmdMgr.addCommand(new CmdViewMeasureToggleAll());
     rcCmdMgr.addCommand(new StdCmdSelBoundingBox());
     rcCmdMgr.addCommand(new StdCmdSelBack());

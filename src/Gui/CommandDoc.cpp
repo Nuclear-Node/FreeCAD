@@ -1769,7 +1769,7 @@ void CreateDocCommands(void)
     rcCmdMgr.addCommand(new StdCmdPaste());
     rcCmdMgr.addCommand(new StdCmdDuplicateSelection());
     rcCmdMgr.addCommand(new StdCmdSelectAll());
-    rcCmdMgr.addCommand(new StdCmdDelete());
+    //rcCmdMgr.addCommand(new StdCmdDelete());
     rcCmdMgr.addCommand(new StdCmdRefresh());
     rcCmdMgr.addCommand(new StdCmdTransform());
     rcCmdMgr.addCommand(new StdCmdPlacement());

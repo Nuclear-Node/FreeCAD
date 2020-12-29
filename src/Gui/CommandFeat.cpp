@@ -118,7 +118,7 @@ void CreateFeatCommands(void)
     CommandManager &rcCmdMgr = Application::Instance->commandManager();
 
     rcCmdMgr.addCommand(new StdCmdFeatRecompute());
-    rcCmdMgr.addCommand(new StdCmdRandomColor());
+   //rcCmdMgr.addCommand(new StdCmdRandomColor()); 
 }
 
 } // namespace Gui
