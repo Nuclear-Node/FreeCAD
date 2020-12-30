@@ -56,9 +56,10 @@ Gui::MenuItem* Workbench::setupMenuBar() const
 {
     Gui::MenuItem* root = StdWorkbench::setupMenuBar();
     Gui::MenuItem* item = root->findItem("&Tools");
+    Gui::MenuItem* item2 = root->findItem("&Help");
 
 // == Profile menu ==========================================
-/*    Gui::MenuItem* profile = new Gui::MenuItem;
+/*  Gui::MenuItem* profile = new Gui::MenuItem;
     root->insertItem(item, profile);
     profile->setCommand("P&rofiles");
 
@@ -96,6 +97,15 @@ Gui::MenuItem* Workbench::setupMenuBar() const
             << consaccel
             << bsplines
             << virtualspace;
+
+// == Simulation menu ==========================================
+
+    Gui::MenuItem* simulation = new Gui::MenuItem;
+    root->insertItem(item2, simulation);
+    simulation->setCommand("&Simulation");
+
+   // *simulation << "hello";
+
 
     return root;
 }
