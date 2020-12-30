@@ -55,7 +55,7 @@ Workbench::~Workbench()
 Gui::MenuItem* Workbench::setupMenuBar() const
 {
     Gui::MenuItem* root = StdWorkbench::setupMenuBar();
-    Gui::MenuItem* item = root->findItem("&Windows");
+    Gui::MenuItem* item = root->findItem("&Tools");
 
 // == Profile menu ==========================================
     Gui::MenuItem* profile = new Gui::MenuItem;

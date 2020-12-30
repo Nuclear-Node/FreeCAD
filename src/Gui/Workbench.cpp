@@ -610,7 +610,7 @@ MenuItem* StdWorkbench::setupMenuBar() const
 #endif
 
     // Macro
-    MenuItem* macro = new MenuItem(menuBar);
+  /*  MenuItem* macro = new MenuItem(menuBar);
     macro->setCommand("&Macro");
     *macro << "Std_DlgMacroRecord" << "Std_MacroStopRecord" << "Std_DlgMacroExecute"
         << "Separator" << "Std_DlgMacroExecuteDirect" << "Std_MacroStartDebug"
@@ -623,7 +623,7 @@ MenuItem* StdWorkbench::setupMenuBar() const
     *wnd << "Std_ActivateNextWindow" << "Std_ActivatePrevWindow" << "Separator"
         << "Std_TileWindows" << "Std_CascadeWindows"
         << "Std_ArrangeIcons" << "Separator" << "Std_WindowsMenu" << "Std_Windows";
-
+        */
     // Separator
     MenuItem* sep = new MenuItem(menuBar);
     sep->setCommand("Separator");
