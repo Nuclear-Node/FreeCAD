@@ -494,22 +494,22 @@ void StdWorkbench::setupContextMenu(const char* recipient, MenuItem* item) const
         measure->setCommand("Measure");
         *measure << "View_Measure_Toggle_All" << "View_Measure_Clear_All";
         */
-        *item << "Std_ViewFitAll" << "Std_ViewFitSelection" << "Std_DrawStyle" << StdViews << measure
-            << "Separator" << "Std_ViewDockUndockFullscreen";
+        /**item << "Std_ViewFitAll" << "Std_ViewFitSelection" << "Std_DrawStyle" << StdViews << measure
+            << "Separator" << "Std_ViewDockUndockFullscreen";*/
 
         if (Gui::Selection().countObjectsOfType(App::DocumentObject::getClassTypeId()) > 0) {
-            *item << "Separator" << "Std_SetAppearance" << "Std_ToggleVisibility"
-                << "Std_ToggleSelectability" << "Std_TreeSelection"
-                << "Std_RandomColor" << "Separator" << "Std_Delete";
+            *item /*<< "Separator" << "Std_SetAppearance" << "Std_ToggleVisibility"
+                << "Std_ToggleSelectability"*/ << "Std_TreeSelection"
+                /*<< "Std_RandomColor" << "Separator" << "Std_Delete"*/;
         }
     }
     else if (strcmp(recipient, "Tree") == 0)
     {
         if (Gui::Selection().countObjectsOfType(App::DocumentObject::getClassTypeId()) > 0) {
-            *item << "Std_ToggleVisibility" << "Std_ShowSelection" << "Std_HideSelection"
-                << "Std_ToggleSelectability" << "Std_TreeSelectAllInstances" << "Separator"
-                << "Std_SetAppearance" << "Std_RandomColor" << "Separator"
-                << "Std_Cut" << "Std_Copy" << "Std_Paste" << "Std_Delete" << "Separator";
+            *item /*<< "Std_ToggleVisibility"*/ << "Std_ShowSelection" << "Std_HideSelection"
+                /*<< "Std_ToggleSelectability"*/ << "Std_TreeSelectAllInstances" /*<< "Separator"
+                << "Std_SetAppearance"<< "Std_RandomColor"*/ << "Separator"
+                << "Std_Cut" << "Std_Copy" << "Std_Paste" /*<< "Std_Delete"*/ << "Separator";
         }
     }
 }
@@ -539,7 +539,7 @@ MenuItem* StdWorkbench::setupMenuBar() const
     edit->setCommand("&Edit");
     *edit << "Std_Undo" << "Std_Redo" << "Separator" << "Std_Cut" << "Std_Copy"
         << "Std_Paste" << "Std_DuplicateSelection" << "Separator"
-        << "Std_Refresh" << "Std_BoxSelection" << "Std_BoxElementSelection" << "Std_SelectAll" << "Std_Delete"
+        << "Std_Refresh" << "Std_BoxSelection" << "Std_BoxElementSelection" << "Std_SelectAll" /*<< "Std_Delete"*/
         << "Separator" << "Std_Placement" /*<< "Std_TransformManip"*/ << "Std_Alignment"
         << "Std_Edit" << "Separator" << "Std_DlgPreferences";
 
@@ -552,7 +552,7 @@ MenuItem* StdWorkbench::setupMenuBar() const
     // Standard views
     MenuItem* stdviews = new MenuItem;
     stdviews->setCommand("Standard views");
-    *stdviews << "Std_ViewFitAll" << "Std_ViewFitSelection" << axoviews
+    *stdviews /*<< "Std_ViewFitAll" << "Std_ViewFitSelection"*/ << axoviews
         << "Separator" << "Std_ViewFront" << "Std_ViewTop"
         << "Std_ViewRight" << "Separator" << "Std_ViewRear"
         << "Std_ViewBottom" << "Std_ViewLeft"
@@ -573,26 +573,26 @@ MenuItem* StdWorkbench::setupMenuBar() const
     // Visibility
     MenuItem* visu = new MenuItem;
     visu->setCommand("Visibility");
-    *visu << "Std_ToggleVisibility" << "Std_ShowSelection" << "Std_HideSelection"
+    *visu /*<< "Std_ToggleVisibility"*/ << "Std_ShowSelection" << "Std_HideSelection"
         << "Std_SelectVisibleObjects"
         << "Separator" << "Std_ToggleObjects" << "Std_ShowObjects" << "Std_HideObjects"
-        << "Separator" << "Std_ToggleSelectability"
-        << "Separator" << "View_Measure_Toggle_All" << "View_Measure_Clear_All";
+        << "Separator" /*<< "Std_ToggleSelectability"
+        << "Separator" */<< "View_Measure_Toggle_All" /*<< "View_Measure_Clear_All"*/;
 
     // View
     MenuItem* view = new MenuItem(menuBar);
     view->setCommand("&View");
     *view << "Std_ViewCreate" << "Std_OrthographicCamera" << "Std_PerspectiveCamera" << "Std_MainFullscreen" << "Separator"
-        << stdviews << "Std_FreezeViews" << "Std_DrawStyle" << "Std_SelBoundingBox"
+        << stdviews << "Std_FreezeViews" /*<< "Std_DrawStyle"*/ << "Std_SelBoundingBox"
         << "Separator" << view3d << zoom
-        << "Std_ViewDockUndockFullscreen" << "Std_AxisCross" << "Std_ToggleClipPlane"
+        /*<< "Std_ViewDockUndockFullscreen"*/ << "Std_AxisCross" << "Std_ToggleClipPlane"
         << "Std_TextureMapping"
 #ifdef BUILD_VR
         << "Std_ViewVR"
 #endif 
         << "Separator" << visu
-        << "Std_ToggleVisibility" << "Std_ToggleNavigation"
-        << "Std_SetAppearance" << "Std_RandomColor" << "Separator"
+        /*<< "Std_ToggleVisibility"*/ << "Std_ToggleNavigation"
+        /* << "Std_SetAppearance" << "Std_RandomColor"*/ << "Separator"
         << "Std_Workbench" << "Std_ToolBarMenu" << "Std_DockViewMenu" << "Separator"
         << "Std_TreeViewActions"
         << "Std_ViewStatusBar";
@@ -665,7 +665,7 @@ ToolBarItem* StdWorkbench::setupToolBars() const
     // View
     ToolBarItem* view = new ToolBarItem(root);
     view->setCommand("View");
-    *view << "Std_ViewFitAll" << "Std_ViewFitSelection" << "Std_DrawStyle" << "Std_SelBoundingBox"
+    *view /*<< "Std_ViewFitAll" << "Std_ViewFitSelection" << "Std_DrawStyle" */<< "Std_SelBoundingBox"
         << "Separator" << "Std_SelBack" << "Std_SelForward" << "Std_LinkSelectActions"
         << "Separator" << "Std_TreeViewActions" << "Std_ViewIsometric" << "Separator" << "Std_ViewFront"
         << "Std_ViewTop" << "Std_ViewRight" << "Separator" << "Std_ViewRear" << "Std_ViewBottom"
@@ -686,7 +686,7 @@ ToolBarItem* StdWorkbench::setupCommandBars() const
     // View
     ToolBarItem* view = new ToolBarItem(root);
     view->setCommand("Standard views");
-    *view << "Std_ViewFitAll" << "Std_ViewFitSelection" << "Std_ViewIsometric" << "Separator"
+    *view /*<< "Std_ViewFitAll" << "Std_ViewFitSelection" */<< "Std_ViewIsometric" << "Separator"
         << "Std_ViewFront" << "Std_ViewRight" << "Std_ViewTop" << "Separator"
         << "Std_ViewRear" << "Std_ViewLeft" << "Std_ViewBottom";
     // Special Ops
