@@ -540,7 +540,7 @@ MenuItem* StdWorkbench::setupMenuBar() const
     *edit << "Std_Undo" << "Std_Redo" << "Separator" << "Std_Cut" << "Std_Copy"
         << "Std_Paste" /*<< "Std_DuplicateSelection"*/ << "Separator"
         /*<< "Std_Refresh"*/ << "Std_BoxSelection" /*<< "Std_BoxElementSelection"*/ << "Std_SelectAll" << "Std_Delete"
-        << "Separator" /*<< "Std_Placement" << "Std_TransformManip" << "Std_Alignment"*/
+        << "Separator" /*<< "Std_Placement" << "Std_TransformManip" << "Std_Alignment"*/<<"Sketcher_EditSketch"
          << "Separator" << "Std_DlgPreferences";
 
     MenuItem* axoviews = new MenuItem;
