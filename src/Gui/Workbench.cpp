@@ -606,7 +606,7 @@ MenuItem* StdWorkbench::setupMenuBar() const
         << "Std_MeasureDistance" << "Separator"
         << "Std_DemoMode" << "Std_UnitsCalculator" << "Separator" << "Std_DlgCustomize";*/
 
-    *tool << "Std_SelectAll" ;
+    *tool <<"Std_BoxSelection" << "Std_SelectAll" ;
 #ifdef BUILD_ADDONMGR
     * tool << "Std_AddonMgr";
 #endif
