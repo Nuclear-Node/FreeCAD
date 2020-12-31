@@ -1343,7 +1343,7 @@ void View3DInventorViewer::setRenderCache(int mode)
 
 void View3DInventorViewer::setEnabledNaviCube(bool on)
 {
-    naviCubeEnabled = on;
+    naviCubeEnabled = false;
 }
 
 bool View3DInventorViewer::isEnabledNaviCube(void) const
