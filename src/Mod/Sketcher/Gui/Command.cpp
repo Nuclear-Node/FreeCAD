@@ -281,7 +281,7 @@ void CmdSketcherEditSketch::activated(int iMsg)
 
 bool CmdSketcherEditSketch::isActive(void)
 {
-    return Gui::Selection().countObjectsOfType(Sketcher::SketchObject::getClassTypeId()) == 1;
+    return true;
 }
 
 DEF_STD_CMD_A(CmdSketcherLeaveSketch)
@@ -640,7 +640,7 @@ void CmdSketcherValidateSketch::activated(int iMsg)
 
 bool CmdSketcherValidateSketch::isActive(void)
 {
-    return (hasActiveDocument() && !Gui::Control().activeDialog());
+    return true;
 }
 
 DEF_STD_CMD_A(CmdSketcherMirrorSketch)
