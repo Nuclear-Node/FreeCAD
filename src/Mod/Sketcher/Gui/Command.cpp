@@ -135,6 +135,7 @@ namespace SketcherGui {
 /* Sketch commands =======================================================*/
 DEF_STD_CMD_A(CmdSketcherNewSketch)
 
+
 CmdSketcherNewSketch::CmdSketcherNewSketch()
     :Command("Sketcher_NewSketch")
 {
@@ -146,6 +147,7 @@ CmdSketcherNewSketch::CmdSketcherNewSketch()
     sStatusTip      = sToolTipText;
     sPixmap         = "Sketcher_NewSketch";
 }
+
 
 void CmdSketcherNewSketch::activated(int iMsg)
 {

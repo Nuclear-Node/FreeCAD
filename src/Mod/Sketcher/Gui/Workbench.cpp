@@ -352,20 +352,21 @@ inline void SketcherAddWorkspaceSketchExtra(T& /*sketch*/){
 
 template <>
 inline void SketcherAddWorkspaceSketchExtra<Gui::MenuItem>(Gui::MenuItem& sketch){
-    sketch  << "Sketcher_ReorientSketch"
-            << "Sketcher_ValidateSketch"
-            << "Sketcher_MergeSketches"
-            << "Sketcher_MirrorSketch";
+    sketch << "Sketcher_ValidateSketch"
+           << "Separator";
+            //<< "Sketcher_ReorientSketch"
+            //<< "Sketcher_MergeSketches"
+            //<< "Sketcher_MirrorSketch";
 }
 
 template <typename T>
 inline void Sketcher_addWorkbenchSketchActions(T& sketch){
-    sketch  << "Sketcher_NewSketch"
-            << "Sketcher_EditSketch"
-            << "Sketcher_LeaveSketch"
-            << "Sketcher_ViewSketch"
-            << "Sketcher_ViewSection"
-            << "Sketcher_MapSketch";
+    sketch << "Sketcher_EditSketch";
+            //<< "Sketcher_NewSketch"
+            //<< "Sketcher_LeaveSketch"
+            //<< "Sketcher_ViewSketch"
+            //<< "Sketcher_ViewSection"
+            //<< "Sketcher_MapSketch";
     SketcherAddWorkspaceSketchExtra( sketch );
 }
 
